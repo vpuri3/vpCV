@@ -1,0 +1,101 @@
+%
+% in preamble, \include{vpack}
+%
+\usepackage{amsfonts,amssymb,amsbsy,amsmath}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{siunitx}       % \SI
+\usepackage{cancel}        % \cancel
+\usepackage{listings}      % source code formatting
+
+\usepackage{soul}          % \hl
+\usepackage{float}         % float positioning option \begin{figure}[H]
+\usepackage{graphicx}      % \includegraphics  
+\usepackage{subfigure}
+%\usepackage{tikz}         % stick figures
+\usepackage{xcolor}
+\definecolor{periwinkledark}{RGB}{102, 102, 128}
+\newcommand{\vp}[1]{\textcolor{periwinkledark} {VP: #1 }}
+
+\newcommand{\todo}[1]{\hl{todo: #1}}
+
+\usepackage{hyperref} % \autoref
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\sectionautorefname}{Section}
+
+%================================ THEOREMS ===============================%
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{remark}{Identity}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+
+%\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand{\vv}{vis-\`a-vis }
+%================================== MATHS ==================================%
+% Convention
+% 
+% Lowercase Greek: Scalars (Reals)
+% Uppercase Greek/Latin: Matrix Operator
+% Lowercase Latin Bold: Vector Field (over some domain)
+% Lowercase Latin Underlined: Discretized Vector Field
+% Double Underlined: Second Order Tensor Field
+%
+% (u,v): Inner Product
+% <T,u>: Application of function T(u)
+% 
+
+\newcommand{\eqn}[1]{ % numbered equation environment
+    \begin{equation}
+    \begin{aligned}
+        #1
+    \end{aligned}
+    \end{equation}
+}
+\newcommand{\eqnn}[1]{ % unnumbered equation environment
+    \begin{equation*}
+    \begin{aligned}
+        #1
+    \end{aligned}
+    \end{equation*}
+}
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}             % units
+\newcommand{\nvect}[1]{\underline{#1}}                         % discretized scalar field
+\newcommand{\vect}[1]{\boldsymbol{#1}}                         % vector field
+\newcommand{\uvect}[1]{\boldsymbol{\hat{#1}}}                  % unit vector (field)
+\newcommand{\tensor}[1]{\underline{\underline{#1}}}            % second order tensor field
+\newcommand{\der}{\,\mathrm{d}}                                % dx ==> \der x total derivative
+\newcommand{\Der}{\,\mathrm{D}}                                % Du ==> \Der u material derivative
+\newcommand{\ppp}[1]{\partial_{#1}}                            % partial derivative
+\newcommand{\vvv}{\delta}                                      % variation
+\newcommand{\del}{\vect{\nabla}}                               % gradient vector operator
+\newcommand{\grad}{\del}                                       % gradient vector operator
+\newcommand{\ddd}[1]{\dfrac{\mathrm{d}}{\mathrm{d} #1}}        % total derivative
+\newcommand{\material}{\mathrm{D}_{t}}                         % material derivative (wrt time)
+\newcommand{\defeq}{\mathrel{\mathop:}=}                       % define equal to
+\newcommand{\degree}{^\circ}                                   % degree
+\newcommand{\component}[1]{\langle #1 \rangle}                 % vector components <#,#>
+\newcommand{\vvec}[1]{\begin{pmatrix}#1\end{pmatrix}}          % vector components (# \\ #)
+\newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}           % matrix [# & # \\ # & #]
+\newcommand{\transp}{\intercal}                                % matrix transpose A^\transp
+\newcommand{\expo}[1]{\mathrm{e}^{#1}}                         % e = 2.71..
+\newcommand{\al}{\alpha}                                       % \alpha
+\newcommand{\supp}[1]{\mathrm{supp}(#1)}                       % support of a function
+\newcommand{\subsubset}{\subset\subset}                        % A compact subset of B
+\renewcommand{\st}{\text{ such that }}                         % such that
+\newcommand{\contradiction}{\ensuremath{\Rightarrow\!\Leftarrow}} % contradiction
+\newcommand{\rt}[2]{\sqrt[#1]{#2}}                             % root
+\newcommand{\Re}{\text{Re}}                                    % Reynolds Number
+\newcommand{\Pe}{\text{Pe}}                                    % Peclet Number
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\N}{\mathbb{N}}                                    % Set of naturals
+\newcommand{\Z}{\mathbb{Z}}                                    % Set of integers
+\newcommand{\Q}{\mathbb{Q}}                                    % Set of rationals
+\newcommand{\R}{\mathbb{R}}                                    % Set of reals
+\newcommand{\L}{\mathcal{L}}                                   % Space of linear operators

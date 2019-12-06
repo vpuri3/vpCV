@@ -1,0 +1,273 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{
+    letterpaper % letterpaper ==> 8.5"x11.0"
+   ,lmargin=0.50in
+   ,rmargin=0.50in
+   ,tmargin=1.00in
+   ,bmargin=1.00in
+}
+
+\include{vpack}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+     urlcolor=black
+}
+
+% line/paragraph spacing
+\setlength{\parindent}{0pt}           % para indent
+\setlength{\parskip}{1em}             % para spacing
+\renewcommand{\baselinestretch}{1.0}  % line spacing
+
+% packages
+\usepackage{multicol}
+
+\usepackage{multirow}                 % for tables
+
+% macros
+\setlength{\footskip}{1em}
+\setlength{\columnsep}{-1.20\linewidth}
+\setlength{\marginparsep}{0em}
+\setlength{\marginparwidth}{0.7in}
+
+% header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.80pt}
+\lhead{
+    \textbf{\Huge Vedant Puri}
+}
+%\rhead{
+%   \texttt{+}1-347-330-1343                               $\vert$
+%   \href{mailto:vpuri3@illinois.edu}{vpuri3@illinois.edu} $\vert$
+%   \url{www.github.com/vpuri3}
+%}
+\footskip 0em
+\rfoot{
+    Updated:\monthyear
+}
+
+\def \monthyear{\space\ifcase\month\or 
+  January \or February \or March \or April \or May \or June \or 
+  July \or August \or September \or October \or November \or December \fi 
+  \number\year }
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STARTING DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contact Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Contact \\ Information}
+\columnbreak
+
+Email: \href{mailto:vpuri3@illinois.edu}{vpuri3@illinois.edu}
+\hfill LinkedIn: \url{www.linkedin.com/in/vpuri3}\\
+Phone: \texttt{+}1-347-330-1343                              
+\hfill Code:     \url{www.github.com/vpuri3}
+% \hfill Website:  \url{www.mcs.anl.gov/~vpuri}
+
+\end{multicols}
+\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Summary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{multicols}{2}
+%\textsc{Objective}
+%\columnbreak
+%
+%Seeking opportunities aimed at advancing simulation and modelling technology starting January 2020.
+%
+%\end{multicols}
+%\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Education}
+\columnbreak
+
+\textbf{University of Illinois Urbana-Champaign} \hfill 2015--2019
+
+\vspace{-2.0em}
+\begin{itemize}[label= ]
+    \setlength\itemsep{-0.5em}
+    \item {\sl B.S. Engineering Mechanics}, Secondary Field: {\sl Fluid Mechanics} \hfill GPA: 3.65/4.00
+    \item {\sl B.S. Mathematics} (dual degree), Concentration: {\sl Graduate Preparatory}
+    \item  Minor: {\sl Computational Science and Engineering}
+\end{itemize}
+\vspace{-2.0em}
+
+\end{multicols}
+\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Work Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Work \\ Experience}
+\columnbreak
+
+{\sl Research Aide,} \textbf{Argonne National Laboratory} \hfill May--Jul 2018
+
+\vspace{-2.0em}
+\begin{itemize}[label=-]
+    \setlength\itemsep{-0.5em}
+    \item Conducted Direct Numerical Simulations of wall-bounded flows in undulating geometries utilising up to $1024$ compute nodes for $200$ hours at Argonne Leadership Computing Facility supercomputers
+    \item Computed budget terms for the tensor Reynolds Stress Transport Equation to study mechanisms responsible for transport, production and dissipation of turbulent kinetic energy%\todo{how}
+    %\item \todo{Roughness, flow charecteristics, subgrid stress modelling}
+    \item Wrote post-processing setup to compute wall stresses, spatial averages and other turbulence statistics
+    \item Study extended till December $2019$, counting for research credit at University of Illinois
+\end{itemize}
+\vspace{-2.0em}
+%
+\vspace{0.5em}
+%
+{\sl Intern,} \textbf{National Center for Supercomputing Applications} \hfill Sep 2017--Apr 2018
+
+\vspace{-2.0em}
+\begin{itemize}[label=-]
+    \setlength\itemsep{-0.5em}
+    \item Extended the novel Scheduled Relaxation Jacobi method for iteratively solving discrete linear systems associated with elliptic partial differential equations to nonlinear boundary value problems
+    \item Obtained preliminary results using above method for initial data of the spacetime metric associated with a binary black hole system, for simulations of the Einstein Field Equations
+    \item Wrote tensor-product based preconditioners for iteratively solving elliptic boundary value problems implemented using a discrete sine transform and PETSc, a numerical library
+\end{itemize}
+\vspace{-2.0em}
+%
+\vspace{0.5em}
+%
+{\sl Course Assistant, Introductory Statics,} \textbf{University of Illinois} \hfill Jan 2016--Dec 2018
+
+\vspace{-2.0em}
+\begin{itemize}[label=-]
+    \setlength\itemsep{-0.5em}
+    \item Conducted four weekly discussion sections where $32$ students collaboratively worked on problem sets
+    \item Wrote problem sets, assisted with course logistics, and taught students to use computational tools
+\end{itemize}
+\vspace{-2.0em}
+
+\end{multicols}
+\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Research \\ Work}
+\columnbreak
+
+\vspace{-2.0em}
+\begin{itemize}[label= ]
+    \setlength{\itemindent}{-2.5em}
+    \setlength\itemsep{-0.5\itemsep}
+    \item (thesis) \textbf{V. Puri}, R. Balakrishnan, A. Obabko, P. Fischer, {\sl Turbulent Kinetic Energy Budgets for Direct Numerical Simulations of Wall-bounded Flows in Undulating Geometries} 
+    \item (talk) \textbf{V. Puri}, R. Haas, E. Bentivegna, {\sl Initial Data Generation Algorithms for Einstein Toolkit}. American Physical Society April Meeting, 2018
+\end{itemize}
+\vspace{-2.0em}
+
+%\textbf{Reports and Publications}
+%\textbf{Conference Proceedings}
+
+\end{multicols}
+\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Collegiate Involvement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Collegiate \\ Involvement}
+\columnbreak
+
+{\sl President,} \textbf{Society for Engineering Mechanics} \hfill Aug 2018--May 2019
+
+\vspace{-2.0em}
+\begin{itemize}[label=-]
+    \setlength\itemsep{-0.5em}
+    \item Led an organisation of $30$ students to complete projects such as Chocolate 3D Printer, and S'mores Machine for annual Engineering Open House
+    \item Worked with department of Mechanical Science and Engineering to augment student participation in Engineering Mechanics program through tutorials, advising sessions, company information sessions, workshops, social events, and annual department research fair
+    \item Facilitated in recruiting students to department of Mechanical Science and Engineering
+\end{itemize}
+\vspace{-2.0em}
+%
+\vspace{0.5em}
+%
+{\sl Curriculum Development,} \textbf{Society for Engineering Mechanics} \hfill Oct 2016--May 2018
+
+\vspace{-2.0em}
+\begin{itemize}[label=-]
+    \setlength\itemsep{-0.5em}
+    \item Led a student group to design and build instructional demonstrations such as  Ackermann steering system, zero-force trusses for Theoretical and Applied Mechanics (TAM) courses serving $2500$ students
+    \item Student advisor to Strategic Instructional Innovations Program group for three TAM courses
+\end{itemize}
+\vspace{-2.0em}
+
+\end{multicols}
+\vspace{-1.5em} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Honours and Awards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Honours \\ and Awards}
+\columnbreak
+
+{\sl Theoretical and Applied Mechanics Merit Award} \hfill 2019
+
+\vspace{-2.0em}
+\begin{itemize}[label= ]
+    \setlength\itemsep{-0.5em}
+    \item  Department of Mechanical Science and Engineering award given in honour of a student's special contributions to the Engineering Mechanics program
+\end{itemize}
+\vspace{-2.0em}
+
+
+\end{multicols}
+\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Technical Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Technical \\ Skills}
+\columnbreak
+
+\begin {table}[H]
+\begin{tabular}{l l }
+\hspace{-0.5em}Programming   & \hspace{-0.0em}Fortran, C, C\texttt{++}, MATLAB, Python, Shell\\
+\hspace{-0.5em}Miscellaneous & \hspace{-0.0em}\LaTeX{} Typesetting, Computer Aided Design, woodworking, soldering, photography \\
+\end{tabular}	
+\end{table}
+
+\vspace{-1.0em}
+\end{multicols}
+\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{\small Projects}
+\columnbreak
+
+\vspace{-2.0em}
+\begin{itemize}[label=-]
+    \setlength{\itemindent}{-1.5em}
+    \setlength\itemsep{-0.5\itemsep}
+    \item University of Illinois Capstone Project: Passive cooling solution to absorb up to $\SI{300}{\kilo \joule}$ of heat from propulsion system of Illini Hyperloop; fabrication handled by project sponsor, Novark Technologies, Inc.
+    \item MATLAB numerical PDE codes developed over several courses: Spectral, Spectral Element Methods for incompressible Navier-Stokes, convection-diffusion type problems (\url{www.github.com/vpuri3/spec})
+    %\item%\todo{Compiling} information on maths and stuff (\url{www.github.com/vpuri3/notes})
+    %\item integral eqn % Boundary Element Method boundary element method for Possion, Hemholtz equation (with Fast Multipole Method); time domain integral equation solver for diffusion equation
+\end{itemize}
+\vspace{-2.0em}
+
+\end{multicols}
+\vspace{-1.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vfill
+\end{document}
