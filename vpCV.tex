@@ -3,8 +3,8 @@
 \usepackage{geometry}
 \geometry{
     letterpaper % letterpaper ==> 8.5"x11.0"
-   ,lmargin=0.50in
-   ,rmargin=0.50in
+   ,lmargin=0.60in
+   ,rmargin=0.60in
    ,tmargin=1.00in
    ,bmargin=1.00in
 }
@@ -31,9 +31,9 @@
 
 % macros
 \setlength{\footskip}{1em}
-\setlength{\columnsep}{-1.20\linewidth}
+\setlength{\columnsep}{-1.15\linewidth} % controls column size disparity
 \setlength{\marginparsep}{0em}
-\setlength{\marginparwidth}{0.7in}
+\setlength{\marginparwidth}{0.0in}
 
 % header and footer
 \usepackage{fancyhdr}
@@ -89,7 +89,7 @@
 \textsc{\small Education}
 \columnbreak
 
-\textbf{University of Illinois Urbana-Champaign}, Urbana, IL, USA \hfill Aug 2015--Dec 2019
+\textbf{University of Illinois Urbana-Champaign} \hfill Aug 2015--Dec 2019
 
 \vspace{-1.75em}
 \begin{itemize}[label= ]
@@ -109,37 +109,37 @@
 \textsc{\small Work \\ Experience}
 \columnbreak
 
-{\sl Research Aide,} \textbf{Argonne National Laboratory}, Lemont, IL, USA \hfill Mar--Jun 2020
+{\sl Research Aide,} \textbf{Argonne National Laboratory} \hfill Mar--Jun 2020
 
 \vspace{-1.75em}
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
     \item Wall-Resolved Large Eddy Simulations for United States Department of Energy project
-    %\item Writing journal paper on  two years of research work at UIUC and ANL
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-{\sl Research Aide,} \textbf{Argonne National Laboratory}, Lemont, IL, USA \hfill May--Jul 2018
+{\sl Research Aide,} \textbf{Argonne National Laboratory} \hfill May--Jul 2018
 
 \vspace{-1.75em}
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
-    \item Conducted Direct Numerical Simulations of separated flows in undulating geometries utilising up to $1024$ compute nodes for $200$ hours at Argonne supercomputers using spectral element code NEK5000
-    \item Wrote FORTRAN 77 setup to compute of wall stresses, spatial averages, and budget terms for the tensor Reynolds Stress Transport Equation to study mechanisms of turbulent energy production and dissipation
+    \item Direct Numerical Simulations of turbulent flows near wavy boundaries using supercomputers
+    \item Computed Reynolds Stress budgets within FORTRAN 77 spectral element code NEK5000
+    \item Studied turbulence production, dissipation, spatial transport processes for developing wall-models
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-{\sl Intern,} \textbf{National Center for Supercomputing Applications}, Urbana, IL, USA \hfill Sep 2017--May 2018
+{\sl Intern,} \textbf{National Center for Supercomputing Applications} \hfill Sep 2017--May 2018
 
 \vspace{-1.75em}
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
-    \item Computed initial data for spacetime metric of binary black hole system for gravitational wave simulations
-    \item Solved nonlinear, elliptic PDEs in parallel within C\texttt{++} cosmological framework \textit{Einstein Toolkit}
+    \item Computed spacetime metric initial data of black hole system for gravitational wave simulations
+    \item Solved nonlinear, elliptic PDEs in parallel within C\texttt{++} cosmological framework Einstein Toolkit
     \item Implemented relaxation methods for solving elliptic PDEs, significantly reducing solution time
     \item Wrote Laplacian preconditioners for elliptic PDEs using discrete transforms and PETSc in C
 \end{itemize}
@@ -147,13 +147,13 @@
 
 \vspace{0.5em}
 %
-{\sl Course Assistant - Introductory Statics,} \textbf{University of Illinois}, Urbana, IL, USA \hfill Jan 2016--Dec 2017
+{\sl Course Assistant - Introductory Statics,} \textbf{University of Illinois} \hfill Jan 2016--Dec 2017
 
 \vspace{-1.75em}
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
-    \item Conducted four weekly discussion sections where $32$ students collaboratively worked on problem sets
-    \item Wrote problem sets, assisted with course logistics, and taught students to use numerical tools
+    \item Conducted $4$ weekly discussion sections ($32$ students each), wrote problem sets, assisted with logistics
+    \item Taught mechanical analysis using free-body-diagrams, control-volumes, and numerical tools
 \end{itemize}
 \vspace{-2.0em}
 
@@ -190,8 +190,8 @@
 \vspace{-1.75em}
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
-    \item Led an organisation of $30$ students to complete `Chocolate 3D Printer', and `S'mores Machine' projects
-    \item Augmented student participation in Engineering Mechanics program through tutorials, advising sessions, company information sessions, workshops, social events, and annual department research fair
+    \item Led $30$-student organisation to complete `Chocolate 3D Printer', and `S'mores Machine' projects
+    \item Improved student engagement in Engineering Mechanics program through tutorials, advising, company meetings, workshops, social events, and department research fair
     \item Supported student recruitment to Mechanical Science and Engineering department
 \end{itemize}
 \vspace{-2.0em}
@@ -237,7 +237,7 @@
 
 \begin {table}[H]
 \begin{tabular}{l l }
-\hspace{-0.5em}Programming   & \hspace{-0.0em} FORTRAN 77, C, C\texttt{++}, MATLAB, Python, Shell\\
+\hspace{-0.5em}Programming   & \hspace{-0.0em} FORTRAN 77/90, C, C\texttt{++}, MATLAB, Python, Shell\\
 \hspace{-0.5em}Miscellaneous & \hspace{-0.0em} \LaTeX{} Typesetting, Computer Aided Design, woodworking, soldering, photography \\
 \end{tabular}	
 \end{table}
@@ -260,7 +260,7 @@
     \item \href{https://github.com/vpuri3/Spec}{\texttt{/Spec}}: MATLAB numerical methods repo; spectral/spectral element codes for fluid flow problems
     \item \href{https://github.com/vpuri3/Notes}{\texttt{/Notes}}: Compiled notes on mechanics and mathematical analysis
     \item \href{https://github.com/vpuri3/NekTools}{\texttt{/NekTools}}: Turbulence budgets and post-processing routines for fluid dynamics code NEK5000
-    \item \href{https://github.com/vpuri3/IlliniHyperloop}{\texttt{/IlliniHyperloop}}: (Capstone Project) Implemented a passive cooling solution absorbing $\SI{300}{\kilo \joule}$ of heat from propulsion system of a Hyperloop pod; fabrication handled by sponsor, Novark Technologies, Inc.
+    \item \href{https://github.com/vpuri3/IlliniHyperloop}{\texttt{/IlliniHyperloop}}: (Capstone Project) Passive cooling solution absorbing $\SI{300}{\kilo \joule}$ of heat from propulsion system of a Hyperloop pod; fabrication handled by sponsor, Novark Technologies, Inc.
 \end{itemize}
 \vspace{-2.0em}
 
