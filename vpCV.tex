@@ -40,12 +40,13 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{1.00pt}
-%\renewcommand{\footrulewidth}{0.80pt}
+%\renewcommand{\footrulewidth}{0.40pt}
 \lhead{
     \textbf{\Huge Vedant Puri}
 }
 \rhead{
     \href{mailto:vpuri@anl.gov}{\texttt{vpuri@anl.gov}}\\
+%   \url{https://github.com/vpuri3}%
     \href{tel:13473301343}{\texttt{+1-347-330-1343}}% <-- do not remove "%"
 }
 \footskip 3em
@@ -79,14 +80,14 @@
 % \end{multicols}
 %\vspace{-1.5em}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Education
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{multicols}{2}
 \textsc{Education}
 \columnbreak
 
-%\textbf{Brown University} \hfill Jan $2021$
+%\textbf{Brown University} \hfill $2021$
 %
 %\vspace{-1.75em}
 %\begin{itemize}[label= ]
@@ -98,15 +99,16 @@
 %
 %\vspace{0.5em}
 %
-\textbf{University of Illinois Urbana-Champaign} \hfill Aug $2015$--Dec $2019$
+\textbf{University of Illinois Urbana-Champaign (UIUC)} \hfill Aug $2015$--Dec $2019$
 
 \vspace{-1.75em}
 \begin{itemize}[label= ]
     \setlength\itemsep{-0.25em}
     \setlength{\itemindent}{-1.50em}
     \item \textit{B.S. Engineering Mechanics}, Secondary Field: \textit{Fluid Mechanics} \hfill GPA: $3.66/4.00$
-    \item \textit{B.S. Mathematics} (dual degree), Concentration: \textit{Graduate Preparatory}
-    \item  Minor: \textit{Computational Science and Engineering}
+    \item \textit{B.S. Mathematics}, Concentration: \textit{Graduate Preparatory} \hfill (dual degree)
+    \item \textit{Computational Science and Engineering Minor}
+%   \item Thesis: \textit{Direct Numerical Simulation of Turbulent Flows Over Wavy Walls}
 \end{itemize}
 \vspace{-2.0em}
 
@@ -119,29 +121,29 @@
 \textsc{Work \\ Experience}
 \columnbreak
 
-\textit{Research Aide,} \textbf{Argonne National Laboratory} \hfill Mar 2020--Present
+\textit{Research Aide,} \textbf{Argonne National Laboratory} \hfill Mar $2020$--Present
 
 \vspace{-1.75em}
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
     \setlength{\itemindent}{-1.50em}
-    \item Wall-Resolved Large Eddy Simulations over building-like geometries
-%   \item \textbf{Keywords}: {NEK5000}, {Gmsh}, Reynolds stress budgets, synthetic turbulence generation%, wake recovery
+    \item \textul{Project}: Wake-recovery past bluff-bodies for Department of Energy \textit{Distributed Wind} project
+    \item \textul{Summary}: Conducted Large Eddy Simulations of wind-flow over building-like geometries
+    \item \textul{Keywords}: {NEK5000}, {Gmsh}, Reynolds stress budgets, synthetic turbulence generation
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-\textit{Research Aide,} \textbf{Argonne National Laboratory} \hfill May--Jul $2018$
+\textit{Research Aide,} \textbf{Argonne National Laboratory} \hfill May $2018$--Jul $2018$
 
 \vspace{-1.75em}
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
     \setlength{\itemindent}{-1.50em}
-    \item Direct Numerical Simulations of turbulent flows over smooth and rough wavy walls
-    \item Computed Reynolds Stress budgets within spectral-element code {NEK5000}
-    \item Studied turbulence production, transport, dissipation processes%for developing wall-models
-%   \item \textbf{Keywords}: {NEK5000}, Reynolds stress budgets, turbulence modelling
+    \item \textul{Project}: Direct Numerical Simulations for Department of Energy \textit{Offshore Wind} project
+    \item \textul{Summary}: Analyzed Reynolds stress budgets in canonical flows for turbulence model development
+    \item \textul{Keywords}: {NEK5000}, meshing, post-processing, turbulence modelling
 \end{itemize}
 \vspace{-2.0em}
 
@@ -153,12 +155,10 @@
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
     \setlength{\itemindent}{-1.50em}
-    \item Computed spacetime metric initial data of black hole system for gravitational wave simulations
-    \item Solved nonlinear elliptic PDEs in parallel within C\texttt{++} cosmological framework {Einstein Toolkit}
-    \item Implemented relaxation methods for solving elliptic PDEs, significantly reducing solution time
-    \item Wrote Laplacian preconditioners for elliptic PDEs using discrete transforms and PETSc in C
+    \item \textul{Project}: Initial data generation of spacetime metric for gravitational wave simulations
+    \item \textul{Summary}: Implemented numerical methods for solving nonlinear elliptic PDEs
+    \item \textul{Keywords}: {Einstein Toolkit}, {PETSc}, {FFTW}, preconditioning, {Scheduled Relaxation Jacobi}
 %   \item Computed spacetime metric initial data of black hole system for gravitational wave simulations by numerically solving nonlinear, elliptic PDEs
-%   \item \textbf{Keywords}: {Einstein Toolkit}, {PETSc}, Scheduled Relaxation Jacobi, Laplacian Preconditioning, Discrete Transforms
 \end{itemize}
 \vspace{-2.0em}
 
@@ -187,8 +187,9 @@
 \vspace{-1.75em}
 \begin{itemize}[label= ]
     \setlength{\itemindent}{-2.5em}
-    \setlength\itemsep{-1.0\itemsep}
-    \item (thesis) \textbf{V. Puri}, R. Balakrishnan, A. Obabko, P. Fischer, \textit{Reynolds Stress Budgets for Turbulent Flows Over Smooth and Rough Wavy Walls}
+    \setlength\itemsep{-0.25em}
+    \item (manuscript in preparation) R. Balakrishnan,\textbf{V. Puri}, S. Haering, \textit{Large Eddy Simulation of Flow Past Wall-Mounted Cube}
+    \item (manuscript in preparation) \textbf{V. Puri}, R. Balakrishnan, A. Obabko, P. Fischer, \textit{Reynolds Stress Budgets for Turbulent Flows Over Smooth and Rough Wavy Walls}
     \item (talk) \textbf{V. Puri}, R. Haas, E. Bentivegna, \textit{Initial Data Generation Algorithms for `Einstein Toolkit'}. American Physical Society April Meeting $2018$
 \end{itemize}
 \vspace{-2.0em}
@@ -210,7 +211,7 @@
     \setlength\itemsep{-0.25em}
     \setlength{\itemindent}{-1.50em}
     \item Led organization of $30$ students to pursue engineering projects
-    \item Increase student engagement Engineering Mechanics program %through tutorials, advising, company meetings, workshops, social events, and department research fair
+%   \item Increase student engagement Engineering Mechanics program %through tutorials, advising, company meetings, workshops, social events, and department research fair
 \end{itemize}
 \vspace{-2.0em}
 
@@ -222,7 +223,7 @@
 \begin{itemize}[label=-]
     \setlength\itemsep{-0.25em}
     \setlength{\itemindent}{-1.50em}
-    \item Created instructional demonstrations for engineering courses serving $2500$ students
+    \item Created instructional demonstrations for engineering courses serving $2500$ students annually
     \item Student advisor to Strategic Instructional Innovations Program group for mechanics courses
 \end{itemize}
 \vspace{-2.0em}
@@ -240,7 +241,7 @@
 
 \vspace{-1.75em}
 \begin{itemize}[label= ]
-    \setlength{\itemindent}{-1.50em}
+    \setlength{\itemindent}{-2.50em}
     \item[]  UIUC Mechanical Science and Engineering department award in honour of a student's special contributions to Theoretical and Applied Mechanics, and Engineering Mechanics programs
 \end{itemize}
 \vspace{-2.0em}
@@ -256,9 +257,9 @@
 
 \begin {table}[H]
 \begin{tabular}{l l }
-\hspace{-0.5em}Programming   & \hspace{-0.0em} FORTRAN 77/90, C, C\texttt{++}, MATLAB, Python, Shell\\
-\hspace{-0.5em}Software      & \hspace{-0.0em} PETSc, FFTW, Gmsh, Visit, Paraview, \LaTeX\\
-\hspace{-0.5em}Miscellaneous & \hspace{-0.0em} Computer Aided Design, woodworking, soldering, photography \\
+\hspace{-0.5em}{Programming  } & \hspace{-0.0em} FORTRAN 77/90, C, C\texttt{++}, Shell, MATLAB, Python, \LaTeX{}\\
+\hspace{-0.5em}{Software     } & \hspace{-0.0em} PETSc, FFTW, Gmsh, Visit, Paraview, Creo Parametric\\
+\hspace{-0.5em}{Miscellaneous} & \hspace{-0.0em} Computer Aided Design, woodworking, soldering, photography \\
 \end{tabular}	
 \end{table}
 
@@ -275,11 +276,11 @@
 \begin{itemize}[label=-]
     \setlength{\itemindent}{-1.50em}
     \setlength\itemsep{-0.25em}
-    \item[]\hspace{-1.00em}\url{https://github.com/vpuri3}
-    \item \href{https://github.com/vpuri3/Notes}{\texttt{/Notes}}: \LaTeX{} notes on mechanics, real analysis, functional analysis
-    \item \href{https://github.com/vpuri3/Spec}{\texttt{/Spec}}: Spectral-element incompressible Navier-Stokes MATLAB code in deformed geometries
-    \item \href{https://github.com/vpuri3/NekTools}{\texttt{/NekTools}}: Turbulence budgets and post-processing routines for FORTRAN 77 code {NEK5000}
-    \item \href{https://github.com/vpuri3/IlliniHyperloop}{\texttt{/IlliniHyperloop}}: (UIUC capstone) Passive cooling solution absorbing $\SI{300}{\kilo \joule}$ heat from propulsion system of Hyperloop pod; fabrication handled by sponsor, Novark Technologies, Inc.
+    \item[]\hspace{-0.90em}\url{https://github.com/vpuri3}
+    \item \href{https://github.com/vpuri3/Spec}{\texttt{/Spec}}: Spectral-Element MATLAB code for fluid flow problems; solves incompressible Navier-Stokes equation, advection-diffusion equation in deformed geometries
+    \item \href{https://github.com/vpuri3/NekTools}{\texttt{/NekTools}}: Preprocessing, postprocessing setup for computing turbulence budgets in computational fluid dynamics code {NEK5000} written in FORTRAN 77
+    \item \href{https://github.com/vpuri3/IlliniHyperloop}{\texttt{/IlliniHyperloop}}: (UIUC capstone) Passive cooling solution to dissipate $\SI{300}{\kilo \joule}$ heat from propulsion system of Hyperloop pod; fabricated by sponsor, Novark Technologies, Inc.
+    \item \href{https://github.com/vpuri3/Notes}{\texttt{/Notes}}: Reference notes for continuum mechanics, real analysis, functional analysis
 %   \item \href{https://github.com/vpuri3/semUIUC}{\texttt{/semUIUC}}: Projects by UIUC Society for Engineering Mechanics - ackermann steering, chocolate printer, 2xx projects, s'mores machine
 \end{itemize}
 \vspace{-2.0em}
