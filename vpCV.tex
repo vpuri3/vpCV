@@ -26,7 +26,6 @@
 
 % packages
 \usepackage{multicol}
-
 %\usepackage{multirow}                 % for tables
 
 % macros
@@ -45,9 +44,10 @@
     \textbf{\Huge Vedant Puri}
 }
 \rhead{
-    \url{https://www.mcs.anl.gov/~vpuri/}%\\
-%   \href{mailto:vedantpuri@gmail.com}{\texttt{vedantpuri@gmail.com}}%
-%   \href{tel:13473301343}{\texttt{+1-347-330-1343}}% <-- do not remove "%"
+%   \url{https://www.mcs.anl.gov/~vpuri/}%\\
+%   \url{https://www.github.com/vpuri3/}%\\
+    \href{tel:13473301343}{\texttt{+1-347-330-1343}}\\% <-- do not remove "%"
+    \href{mailto:vedantpuri@gmail.com}{\texttt{vedantpuri@gmail.com}}%
 }
 \footskip 3em
 \rfoot{
@@ -65,13 +65,24 @@
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Education
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{multicols}{2}
 \textsc{Education}
 \columnbreak
 
+\textbf{Brown University}\hfill Jan $2022$ Onwards
+
+\vspace{-1.75em}
+\begin{itemize}[label= ,leftmargin=1.0em]
+    \setlength\itemsep{-0.25em}
+    \item \textit{Sc.M Engineering, Fluid and Thermal Sciences}
+\end{itemize}
+\vspace{-2.0em}
+
+\vspace{0.5em}
+%
 \textbf{University of Illinois Urbana-Champaign (UIUC)} \hfill Aug $2015$--Dec $2019$
 
 \vspace{-1.75em}
@@ -94,49 +105,60 @@
 \textsc{Experience}
 \columnbreak
 
-\textit{Data Science Trainee,} \textbf{CoreCompete}, Durham, NC \hfill Jan $2021$--Present
+\textbf{Julia Computing} $|$ \textit{Intern Engineer}\hfill April $2021$--Present
 
-%\vspace{-0.75em}
 \vspace{-1.75em}
 \begin{itemize}[label=-,leftmargin=1.0em]
     \setlength\itemsep{-0.25em}
-%   \setlength{\itemindent}{-1.50em}
-    \item Developing conversational AI agent for supporting phone calls for debt collection
-    \item \textul{Tech}: Google Cloud Platform, Postman, REST API
+    \item Computational fluid dynamics and deep learning for inverse design applications
+    \item Developing deep learning architectures for numerically solving partial differential equations
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-\textit{Research Assistant,} \textbf{Carnegie Mellon University}, Pittsburgh, PA \hfill Sep $2020$--Jan $2021$
+\textbf{CoreCompete} $|$ \textit{Data Science Trainee}\hfill Jan $2021$--May $2021$
 
 \vspace{-1.75em}
 \begin{itemize}[label=-,leftmargin=1.0em]
     \setlength\itemsep{-0.25em}
 %   \setlength{\itemindent}{-1.50em}
-    %\item Computational fluid dynamics and deep learning for inverse design (cont'd at Julia Comp.)
-    \item Spectral element topology optimization code for inverse design applications
-    \item \textul{Tech}: Julia automatic differentiation, adjoint optimization
+    \item Developed logic of conversational AI agent to support collections calls for a bank
+    \item Analysis and visualization of inventory forecasting models using Google AutoML, Tableau
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-\textit{Research Aide,} \textbf{Argonne National Laboratory}, Chicago, IL \hfill Mar $2020$--Sep $2020$
+\textbf{Carnegie Mellon University} $|$ \textit{Research Assistant}\hfill Sep $2020$--Jan $2021$
 
 \vspace{-1.75em}
 \begin{itemize}[label=-,leftmargin=1.0em]
     \setlength\itemsep{-0.25em}
 %   \setlength{\itemindent}{-1.50em}
-    \item Fluid dynamics simulations (LES, RANS) of airflow over buildings
+    \item Spectral element adjoint optimization code %with overlapping meshes 
+    (cont'd at Julia Computing)
+    % on overlapping grids
+\end{itemize}
+\vspace{-2.0em}
+
+\vspace{0.5em}
+%
+\textbf{Argonne National Laboratory} $|$ \textit{Research Assistant}\hfill Mar $2020$--Sep $2020$
+
+\vspace{-1.75em}
+\begin{itemize}[label=-,leftmargin=1.0em]
+    \setlength\itemsep{-0.25em}
+%   \setlength{\itemindent}{-1.50em}
+    \item Fluid dynamics simulations (LES, RANS) of turbulent airflow in urban landscapes
     \item Pre-processing (mesh generation), and analysis of OpenFOAM, Nek5000 simulations
-    %\item overset/overlapping grids, iRANS models, collaborate with NREL, LANL
+    %\item overset/overlapping grids, iRANS models, collaborated with NREL, LANL on doing comparison studies
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-\textit{Research Aide,} \textbf{Argonne National Laboratory}, Chicago, IL \hfill May $2018$--Jul $2020$
+\textbf{Argonne National Laboratory} $|$ \textit{Research Assistant}\hfill May $2018$--Jul $2020$
 
 \vspace{-1.75em}
 \begin{itemize}[label=-,leftmargin=1.0em]
@@ -144,13 +166,13 @@
 %   \setlength{\itemindent}{-1.50em}
     \item Fluid dynamics simulations (DNS) of airflow over windfarm terrains on supercomputers
     \item Analyzed Reynolds stress budgets in canonical flows for turbulence model development
-    \item Wrote FORTRAN77 setup for post-processing and turbulence budgets analysis in Nek5000
+    %\item Wrote FORTRAN 77 setup for post-processing and turbulence budgets analysis in Nek5000
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-\textit{Intern,} \textbf{National Center for Supercomputing Applications}, Urbana, IL \hfill Sep $2017$--May $2018$
+\textbf{National Center for Supercomputing Applications} $|$ \textit{Intern}\hfill Sep $2017$--May $2018$
 
 \vspace{-1.75em}
 \begin{itemize}[label=-,leftmargin=1.0em]
@@ -158,13 +180,12 @@
 %   \setlength{\itemindent}{-1.50em}
     \item Initial data generation of spacetime metric for gravitational wave simulations in Einstein Toolkit
     \item Implemented numerical methods for solving nonlinear elliptic PDEs (preconditioning, relaxation)
-    %\item \textul{Tech}: {Einstein Toolkit}, {PETSc}, {FFTW}, preconditioning, {Scheduled Relaxation Jacobi}
 \end{itemize}
 \vspace{-2.0em}
 
 \vspace{0.5em}
 %
-{\sl Course Assistant,} \textbf{UIUC Mechanical Engineering}, Urbana, IL \hfill Jan $2016$--Dec $2017$
+\textbf{Mechanical Engineering, UIUC} $|$ \textit{Course Assistant}\hfill Jan $2016$--Dec $2017$
 
 \vspace{-1.75em}
 \begin{itemize}[label=-,leftmargin=1.0em]
@@ -190,7 +211,7 @@
     \setlength{\itemindent}{-1.0em}
     \setlength\itemsep{-0.25em}
 %   \item (manuscript in preparation) R. Balakrishnan,\textbf{V. Puri}, S. Haering, \textit{Large Eddy Simulation of Flow Past Wall-Mounted Cube at $\Re_h=40,0000$}
-    \item (manuscript in preparation) \textbf{V. Puri}, R. Balakrishnan, A. Obabko, P. Fischer, \textit{Turbulent Kinetic Energy Budgets of Flows Over Smooth and Rough Wavy Walls at $\Re_\lambda=4,780$}
+%   \item (manuscript in preparation) \textbf{V. Puri}, R. Balakrishnan, A. Obabko, P. Fischer, \textit{Turbulent Kinetic Energy Budgets of Flows Over Smooth and Rough Wavy Walls at $\Re_\lambda=4,780$}
 %   \item (talk) \textbf{V. Puri}, R. Balakrishnan, \textit{Modelling Flows Over Obstacles in the Atmospheric Boundary Layer}. American Physical Society Division of Fluid Dynamics $2020$
     \item (talk) \textbf{V. Puri}, R. Balakrishnan, \textit{DNS of Flow Over Smooth and Rough Wavy Walls at $\mathit{Re}_\lambda=4760$}. American Physical Society Division of Fluid Dynamics $2020$
     \item (talk) \textbf{V. Puri}, R. Haas, E. Bentivegna, \textit{Initial Data Generation Algorithms for `Einstein Toolkit'}. American Physical Society April Meeting $2018$
@@ -206,7 +227,7 @@
 \textsc{Activities}
 \columnbreak
 
-\textit{President,} \textbf{Society for Engineering Mechanics, UIUC} \hfill Aug $2018$--May $2019$
+\textbf{Society for Engineering Mechanics, UIUC} $|$ \textit{President} \hfill Aug $2018$--May $2019$
 
 \vspace{-0.75em}
 %\vspace{-1.75em}
@@ -220,7 +241,7 @@
 
 %\vspace{0.5em}
 %
-\textit{Curriculum Development,} \textbf{Society for Engineering Mechanics, UIUC} \hfill Oct $2016$--May $2018$
+\textbf{Society for Engineering Mechanics, UIUC} $|$ \textit{Curriculum Development} \hfill Oct $2016$--May $2018$
 
 %\vspace{-1.75em}
 %\begin{itemize}[label=-]
@@ -233,6 +254,23 @@
 %
 \end{multicols}
 \vspace{-1.5em} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\textsc{Skills}
+\columnbreak
+
+\begin {table}[H]
+\begin{tabular}{l l }
+\hspace{-0.6em}{Programming} & \hspace{-0.5em} FORTRAN 77/90, C/C\texttt{++}, Python, Julia, MATLAB, UNIX, \LaTeX{}\\
+\hspace{-0.6em}{Technologies} & \hspace{-0.5em} Google Cloud Platform, REST API, Postman, Gmsh, Tableau, PETSc, FFTW\\
+\hspace{-0.6em}{Design     } & \hspace{-0.5em} Computer aided design, woodworking, soldering, Adobe Lightroom, photography\\
+\end{tabular}	
+\end{table}
+
+\end{multicols}
+\vspace{-1.5em}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Honours and Awards
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,23 +290,6 @@
 \end{multicols}
 \vspace{-1.5em}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Skills
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{multicols}{2}
-\textsc{Skills}
-\columnbreak
-
-\begin {table}[H]
-\begin{tabular}{l l }
-\hspace{-0.6em}{Programming} & \hspace{-0.5em} FORTRAN 77/90, C/C\texttt{++}, Python, Julia, MATLAB, UNIX, \LaTeX{}\\
-%\hspace{-0.6em}{Technologies} & \hspace{-0.5em} PETSc, FFTW, Gmsh, Visit, Paraview, NEK5000, Creo Parametric, Adobe Photoshop Lightroom\\
-\hspace{-0.6em}{Design     } & \hspace{-0.5em} Computer aided design, woodworking, soldering, photography\\
-\end{tabular}	
-\end{table}
-
-\end{multicols}
-\vspace{-1.5em}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Projects
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{multicols}{2}
@@ -280,11 +301,11 @@
     \setlength{\itemindent}{-1.50em}
     \setlength\itemsep{-0.25em}
     \item[]\hspace{-1.00em}\url{https://github.com/vpuri3}
-    \item \href{https://github.com/vpuri3/NekTools}{\texttt{/NekTools}}: FORTRAN 77 toolbox for turbulence budget computation in NEK5000
-    \item \href{https://github.com/vpuri3/SEM.jl}{\texttt{/SEM.jl}}: Julia spectral element PDE solver with adjoint optimization
-    \item \href{https://github.com/vpuri3/Spec}{\texttt{/Spec}}: MATLAB spectral element solver for the incompressible Navier--Stokes equations
+    \item \href{https://github.com/vpuri3/NekTools}{\texttt{/NekTools}}: FORTRAN 77 toolbox for turbulence budgets computation in NEK5000
+    \item \href{https://github.com/vpuri3/SEM.jl}{\texttt{/SEM.jl}}: Julia spectral element PDE solver for machine learning research
+%   \item \href{https://github.com/vpuri3/Spec}{\texttt{/Spec}}: MATLAB spectral element solver for the incompressible Navier--Stokes equations
     \item \href{https://github.com/vpuri3/Notes}{\texttt{/Notes}}: \LaTeX{} notes on mechanics, real analysis, functional analysis
-    \item \href{https://github.com/vpuri3/IlliniHyperloop}{\texttt{/IlliniHyperloop}}: (UIUC capstone) Passive cooling solution to dissipate $\SI{300}{\kilo \joule}$ heat from propulsion system of Hyperloop pod; fabricated by sponsor, Novark Technologies, Inc.
+    \item \href{https://github.com/vpuri3/IlliniHyperloop}{\texttt{/IlliniHyperloop}}: (UIUC capstone project) Passive cooling solution to dissipate $\SI{300}{\kilo \joule}$ heat from propulsion system of Hyperloop pod; fabricated by sponsor, Novark Technologies, Inc.
 %   \item \href{https://github.com/vpuri3/semUIUC}{\texttt{/semUIUC}}: Projects by UIUC Society for Engineering Mechanics - ackermann steering, chocolate printer, 2xx projects, s'mores machine
 \end{itemize}
 \vspace{-2.0em}
