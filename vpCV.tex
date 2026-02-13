@@ -1,341 +1,157 @@
 \documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
 \geometry{
-    letterpaper % letterpaper ==> 8.5"x11.0"
-   ,lmargin=0.85in
-   ,rmargin=0.85in
-   ,tmargin=1.00in
-   ,bmargin=1.00in
+    letterpaper,
+    lmargin=0.70in,
+    rmargin=0.70in,
+    tmargin=0.65in,
+    bmargin=0.70in
 }
-
-\include{vpack}
 
 \hypersetup{
     colorlinks,
     citecolor=black,
     filecolor=black,
     linkcolor=black,
-     urlcolor=black
+    urlcolor=black
 }
 
-% line/paragraph spacing
-\setlength{\parindent}{0pt}           % para indent
-\setlength{\parskip}{1em}             % para spacing
-\renewcommand{\baselinestretch}{1.0}  % line spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.08em}
+\pagenumbering{gobble}
+\setlist[itemize]{leftmargin=1.45em,labelsep=0.5em,itemsep=0.05em,topsep=0.05em,parsep=0em,partopsep=0em}
 
-% packages
-\usepackage{multicol}
-%\usepackage{multirow}                 % for tables
-
-% macros
-\setlength{\footskip}{1em}
-\setlength{\columnsep}{-1.00\linewidth} % controls column size disparity
-\setlength{\marginparsep}{0em}
-\setlength{\marginparwidth}{0.0in}
-
-% header and footer
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{1.00pt}
-%\renewcommand{\footrulewidth}{0.40pt}
-\lhead{
-    \textsc{\Huge Vedant Puri}
-}
-\rhead{
-%   \url{https://www.mcs.anl.gov/~vpuri/}%\\
-%   \url{https://www.github.com/vpuri3/}%\\
-%   \href{tel:13473301343}{\texttt{+1-347-330-1343}}\\% <-- do not remove "%"
-%   \href{mailto:vedantpuri@gmail.com}{\texttt{vedantpuri@gmail.com}}\\%
-    \href{https://vpuri3.github.io/}{\texttt{https://vpuri3.github.io/}}%
-}
-\footskip 3em
-\rfoot{
-%   Updated:\monthyear
+\newcommand{\cvsection}[1]{%
+  \vspace{0.2em}%
+  {\normalsize\textsc{#1}}\\[-0.50em]
+  \rule{\linewidth}{0.4pt}
+  \vspace{-0.25em}
 }
 
-\def \monthyear{\space\ifcase\month\or 
-  January \or February \or March \or April \or May \or June \or 
-  July \or August \or September \or October \or November \or December \fi 
-  \number\year }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STARTING DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cvrole}[3]{\textbf{#1} $|$ \textit{#2}\hfill #3}
+\newcommand{\cvskill}[2]{\textbf{#1}: #2}
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Education
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{multicols}{2}
-\textsc{Education}
-\columnbreak
+{\Huge \textsc{Vedant Puri}}\hfill
+\href{https://vpuri3.github.io/}{\texttt{https://vpuri3.github.io/}}
 
-\textbf{Carnegie Mellon University (CMU)}\hfill Jan $2022$--Present
+\cvsection{Summary}
+Builds scalable transformer architectures grounded in numerical analysis and scientific computing.
+Developed FLARE (Fast Low-Rank Attention Routing Engine), scaling attention to million-token
+regimes on a single GPU via Triton. Background includes numerical PDE methods, distributed training,
+and PyTorch systems implementation.
 
-\vspace{-1.75em}
-\begin{itemize}[label= ,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-    \item \textit{Ph.D Mechanical Engineering}
-    \item Advisor: Levent Burak Kara, Yongjie Jessica Zhang
+\cvsection{Education}
+\textbf{Carnegie Mellon University (CMU)}\hfill Jan 2022--Present
+\begin{itemize}[label=]
+  \item \textit{Ph.D Mechanical Engineering}.
+  Advisors: Levent Burak Kara, Yongjie Jessica Zhang
 \end{itemize}
-\vspace{-2.0em}
 
-\vspace{0.5em}
-
-\textbf{University of Illinois Urbana-Champaign (UIUC)} \hfill $2015$--$2019$
-
-\vspace{-1.75em}
-\begin{itemize}[label= ,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-%   \setlength{\itemindent}{-1.50em}
-    \item \textit{B.S. Engineering Mechanics}, Secondary Field: \textit{Fluid Mechanics} \hfill GPA: $3.66/4.00$
-    \item \textit{B.S. Mathematics}, Concentration: \textit{Graduate Preparatory} \hfill (dual degree)
-    \item Minor: \textit{Computational Science and Engineering}
-    \item Thesis: \textit{Direct Numerical Simulation of Flows Over Wavy Walls at $\Re_\lambda=4780$}
+\textbf{University of Illinois Urbana-Champaign (UIUC)}\hfill 2015--2019
+\begin{itemize}[label=]
+  \item \textit{B.S. Engineering Mechanics}, \textit{B.S. Mathematics}.
+  %\item Minor: \textit{Computational Science and Engineering}
 \end{itemize}
-\vspace{-2.0em}
 
-\end{multicols}
-\vspace{-1.5em}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Work Experience
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{multicols}{2}
-\textsc{Experience}
-\columnbreak
-
-\textbf{Carnegie Mellon University} $|$ \textit{Research Assistant}\hfill Jan $2022$--Present
-
-\vspace{-1.75em}
-\begin{itemize}[label=-,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-    \item Time-series modeling of laser powder bed fusion additive manufacturing process
-    \item Equation-based reduced order modeling for computational fluid dynamics
-    %\item Differentiable geometry representations, automated meshing algorithms
-    \item Phase field simulations of lithium dendritic growth in solid-state batteries
+\cvsection{Selected Research Contributions}
+\cvrole{FLARE: Fast Low-Rank Attention Routing Engine}{Efficient attention architectures}{2025}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  \item Reduced memory from $\mathcal{O}(N^2)$ to $\mathcal{O}(NM)$. \hfill (Under review)
+  \item Implemented Triton + PyTorch modules with reproducible scaling results.
+  \item Evaluated on PDE surrogate, NLP, and vision tasks.
+  \item arXiv: \href{https://arxiv.org/abs/2508.12594}{2508.12594}, code: \href{https://github.com/vpuri3/FLARE.py}{vpuri3/FLARE.py}.
 \end{itemize}
-\vspace{-2.0em}
 
-\vspace{0.5em}
-\textbf{Julia Computing} $|$ \textit{Intern Engineer}\hfill April $2021$--Nov $2021$
-
-\vspace{-1.75em}
-\begin{itemize}[label=-,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-    \item Wrote the linear solve interface for Julia \texttt{SciML.ai} ecosystem
-    \item Developed differentiable geometry representations and automated meshing algorithms
-    \item Developed deep learning surrogate models for solving partial differential equations
+\cvrole{Equation-based PDE modeling with neural fields}{Hybrid data + physics methods}{JCP 2025}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  \item Neural fields used as nonlinear spatial ansatz in reduced-order modeling.
+  \item Physics-based evolution combined with learned spatial representations.
 \end{itemize}
-\vspace{-2.0em}
 
-%\vspace{0.5em}
-%\textbf{CoreCompete} $|$ \textit{Data Science Trainee}\hfill Jan $2021$--May $2021$
+\cvsection{Experience}
 %
-%\vspace{-1.75em}
-%\begin{itemize}[label=-,leftmargin=1.0em]
-%    \setlength\itemsep{-0.25em}
-%%   \setlength{\itemindent}{-1.50em}
-%    \item Analyzed inventory forecasting models, and developed logic for a conversational AI agent
-%%   \item Developed logic of conversational AI agent to support collections calls at a financial institution
-%%   \item Analysis and visualization of inventory forecasting models for an apparels company
+\cvrole{Carnegie Mellon University}{Research Assistant}{Jan 2022--Present}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  % \item Efficient attention architectures for scientific computing.
+  % \item Equation-based reduced order modeling for computational fluid dynamics.
+  \item Phase field simulations of lithium dendritic growth in solid-state batteries.
+  \item Turbulence closure modeling with differentiable physics.
+\end{itemize}
+%
+\cvrole{Julia Computing}{Intern Engineer}{Apr 2021--Nov 2021}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  \item Built numerical solvers for scientific machine learning ecosystem in Julia.
+  %\item Wrote the linear solve interface for Julia \texttt{SciML.ai} ecosystem.
+  %\item Developed differentiable geometry representations and automated meshing algorithms.
+  %\item Developed deep learning surrogate models for solving partial differential equations.
+\end{itemize}
+
+\cvrole{Carnegie Mellon University}{Research Assistant}{Sep 2020--Jan 2021}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  %\item Wrote \href{https://github.com/vpuri3/SpectralElements.jl}{\texttt{SpectralElements.jl}}, a differentiable PDE solver for machine learning research.
+  \item Developed differentiable geometry representations and meshing algorithms.
+\end{itemize}
+
+\cvrole{Argonne National Laboratory}{Research Assistant}{Mar 2020--Sep 2020}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  \item Executed large-scale simulations of turbulent airflow over urban landscapes on supercomputers.
+  %\item Fluid dynamics simulations (LES, RANS) of turbulent airflow in urban landscapes.
+  %\item Meshing, setup, benchmarking, and analysis in OpenFOAM and \textsc{Nek5000}.
+\end{itemize}
+
+\cvrole{Argonne National Laboratory}{Research Assistant}{May 2018--Jul 2018}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  \item Executed high-fidelity fluid dynamics simulations and analyzed turbulent statistics for closure modeling.
+  % \item Fluid dynamics simulations of airflow over windfarm terrains on supercomputers.
+  % \item Analysed Reynolds stress budgets in canonical flows for turbulence model development.
+  %\item Developed \href{https://github.com/vpuri3/NekTools}{\texttt{NekTools}}, a FORTRAN 77 toolbox for post-processing \textsc{Nek5000} simulations.
+\end{itemize}
+
+\cvrole{National Center for Supercomputing Applications}{Intern}{Sep 2017--May 2018}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  \item Numerical simulation of spacetime metric for gravitational wave simulations.
+  %\item Implemented preconditioning and relaxation methods for nonlinear PDEs.
+\end{itemize}
+
+%\cvrole{Mechanical Science \& Engineering, UIUC}{Course Assistant}{Jan 2016--Dec 2017}
+%\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+%  \item Taught mechanical analysis using free-body diagrams and control volumes for Statics.
+%  \item Created instructional demonstrations for engineering courses serving 2500 students annually.
 %\end{itemize}
-%\vspace{-2.0em}
 
-\vspace{0.5em}
-%
-\textbf{Carnegie Mellon University} $|$ \textit{Research Assistant}\hfill Sep $2020$--Jan $2021$
+\cvsection{Teaching}
+\cvrole{Carnegie Mellon University}{Teaching Assistant, Numerical Analysis}{Spring 2025}
 
-\vspace{-1.75em}
-\begin{itemize}[label=-,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-    \item Wrote \href{https://github.com/vpuri3/SpectralElements.jl}{\texttt{SpectralElements.jl}}, a differentiable PDE solver for machine learning research
-    \item Developed differentiable geometry representations and meshing algorithms
-\end{itemize}
-\vspace{-2.0em}
+\cvrole{Carnegie Mellon University}{Teaching Assistant, Discrete Differential Geometry}{Spring 2023}
 
-\vspace{0.5em}
-%
-\textbf{Argonne National Laboratory} $|$ \textit{Research Assistant}\hfill Mar $2020$--Sep $2020$
+\cvrole{University of Illinois}{Course Assistant, Introductory Statics}{Spring 2016--Fall 2017}
 
-\vspace{-1.75em}
-\begin{itemize}[label=-,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-%   \setlength{\itemindent}{-1.50em}
-    \item Fluid dynamics simulations (LES, RANS) of turbulent airflow in urban landscapes
-    \item Meshing, setup, benchmarking, analysis of fluid simulations in OpenFOAM, \textsc{Nek5000}
-%   \item overset/overlapping grids, iRANS models, collaborated with NREL, LANL on doing comparison studies
-\end{itemize}
-\vspace{-2.0em}
+\cvsection{Publications}
+\textbf{Puri, V}. et al., \textit{FLARE: Fast Low-Rank Attention Routing Engine}. arXiv 2025. (Under review)
 
-\vspace{0.5em}
-%
-\textbf{Argonne National Laboratory} $|$ \textit{Research Assistant}\hfill May $2018$--Jul $2018$
+\textbf{Puri, V}. et al., \textit{SNF-ROM: Projection-based nonlinear reduced order modeling with smooth neural fields}. JCP 2025.
 
-\vspace{-1.75em}
-\begin{itemize}[label=-,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-%   \setlength{\itemindent}{-1.50em}
-    \item Fluid dynamics simulations of airflow over windfarm terrains on supercomputers
-    \item Analysed Reynolds stress budgets in canonical flows for turbulence model development
-    \item Developed \href{https://github.com/vpuri3/NekTools}{\texttt{NekTools}}, a FORTRAN 77 toolbox for post-processing \textsc{Nek5000} simulations
-\end{itemize}
-\vspace{-2.0em}
+Shankar, V., \textbf{Puri, V.}, et al., \textit{Differentiable physics closure modeling for Burgers' turbulence}. MLST 2023.
 
-\vspace{0.5em}
-%
-\textbf{National Center for Supercomputing Applications} $|$ \textit{Intern}\hfill Sep $2017$--May $2018$
+\cvsection{Activities \& Awards}
+\cvrole{World Conference on Computational Mechanics}{Best poster in fluid dynamics}{2024}
 
-\vspace{-1.75em}
-\begin{itemize}[label=-,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-%   \setlength{\itemindent}{-1.50em}
-    \item Numerical simulation of spacetime metric for gravitational wave simulations in Einstein Toolkit
-    \item Implemented preconditioning, relaxation methods for numerically solving nonlinear PDEs
-\end{itemize}
-\vspace{-2.0em}
+\cvrole{University of Illinois}{Theoretical and Applied Mechanics Merit Award}{2019}
 
-\vspace{0.5em}
-%
-\textbf{Mechanical Science \& Engineering, UIUC} $|$ \textit{Course Assistant}\hfill Jan $2016$--Dec $2017$
+\cvrole{Society for Engineering Mechanics, UIUC}{President}{2019}
 
-\vspace{-1.75em}
-\begin{itemize}[label=-,leftmargin=1.0em]
-    \setlength\itemsep{-0.25em}
-%   \setlength{\itemindent}{-1.50em}
-    \item Taught mechanical analysis using free-body-diagrams and control-volumes for \textit{Statics} course
-    %\item Conducted $4$ weekly discussion sections with $32$ students each
-    \item Created instructional demonstrations for engineering courses serving $2500$ students annually
-\end{itemize}
-\vspace{-2.0em}
+%\cvrole{Society for Engineering Mechanics, UIUC}{Curriculum Development}{2017--2018}
 
-\end{multicols}
-\vspace{-1.5em}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Research Work
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{multicols}{2}
-%\textsc{Research}
-%\columnbreak
-%
-%\vspace{-1.75em}
-%\begin{itemize}[label= ,leftmargin= 1.0em]
-%    \setlength{\itemindent}{-1.0em}
-%    \setlength\itemsep{-0.25em}
-%    \item V. Shankar, \textbf{V. Puri}, R. Balakrishnan, R. Maulik, V. Viswanathan, \textit{Differentiable physics-enabled closure modeling for Burgers' turbulence}, Machine Learning: Science and Technology $2022$
-%    %\item (talk) \textbf{V. Puri}, R. Balakrishnan, \textit{DNS and LES of Flow Over Smooth and Rough Wavy Walls}. American Physical Society Division of Fluid Dynamics $2021$
-%    \item (talk) \textbf{V. Puri}, R. Balakrishnan, \textit{DNS of Flow Over Smooth and Rough Wavy Walls at $\mathit{Re}_\lambda=4760$}. American Physical Society Division of Fluid Dynamics $2020$
-%    \item (talk) \textbf{V. Puri}, R. Haas, E. Bentivegna, \textit{Initial Data Generation Algorithms for `Einstein Toolkit'}. American Physical Society April Meeting $2018$
-%\end{itemize}
-%\vspace{-2.0em}
-%
-%\end{multicols}
-%\vspace{-1.5em}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Teaching
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{multicols}{2}
-\textsc{Teaching}
-\columnbreak
+\cvsection{Technical Skills}
+\cvskill{Machine Learning Systems}{PyTorch, Triton}
 
-\textbf{Carnegie Mellon University} $|$ \textit{Teaching assistant}, numerical analysis \hfill Spring $2025$
+\cvskill{Numerical Computing}{Linear systems, finite elements, spectral methods}
 
-\vspace{-0.75em}
-\textbf{Carnegie Mellon University} $|$ \textit{Teaching assistant}, discrete differential geometry \hfill Spring $2023$
+\cvskill{Programming Languages}{Python, Julia, C, Fortran 77, MATLAB, UNIX, \LaTeX}
 
-\vspace{-0.75em}
-\textbf{University of Illinois} $|$ \textit{Course assistant}, introductory statics
-\hfill Spring $2016$--Fall $2017$
-
-\end{multicols}
-\vspace{-1.5em} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Activities
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{multicols}{2}
-\textsc{Activities\\ \& Awards}
-\columnbreak
-
-\textbf{World Conference on Computational Mechanics} $|$ \textit{Best poster in fluid dynamics} \hfill $2024$
-
-\vspace{-0.75em}
-\textbf{University of Illinois} $|$ \textit{Theoretical and Applied Mechanics Merit Award} \hfill $2019$
-
-\vspace{-0.75em}
-\textbf{Society for Engineering Mechanics, UIUC} $|$ \textit{President}
-\hfill $2019$ % Aug $2018$--May $2019$
-
-\vspace{-0.75em}
-\textbf{Society for Engineering Mechanics, UIUC} $|$ \textit{Curriculum Development} \hfill $2017$--$2018$ % Oct $2016$--May $2018$
-
-\end{multicols}
-\vspace{-1.5em} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Honours and Awards
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{multicols}{2}
-%\textsc{Honours}
-%\columnbreak
-%
-%\textit{Theoretical and Applied Mechanics Merit Award}, \textbf{UIUC} \hfill $2019$
-%
-%%\vspace{-1.75em}
-%%\begin{itemize}[label= ]
-%%    \setlength{\itemindent}{-2.50em}
-%%    \item[]  UIUC Mechanical Science and Engineering department award in honour of a student's special contributions to Theoretical and Applied Mechanics, and Engineering Mechanics programs
-%%\end{itemize}
-%%\vspace{-2.0em}
-%
-%\end{multicols}
-%\vspace{-1.5em}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Skills
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{multicols}{2}
-\textsc{Skills}
-\columnbreak
-
-\begin {table}[H]
-\begin{tabular}{l l }
-\hspace{-0.6em}{GPU Programming} & \hspace{-0.5em} Triton\\
-\hspace{-0.6em}{ML Systems} & \hspace{-0.5em} PyTorch, mixed precision, distributed training\\
-\hspace{-0.6em}{Numerical Computing} & \hspace{-0.5em} Numerical analysis, scientific computing, sparse linear algebra, finite element method, spectral element method\\
-\hspace{-0.6em}{Languages} & \hspace{-0.5em} Python, Julia, C, Fortran 77, MATLAB, UNIX\\
-\end{tabular}	
-\end{table}
-
-\end{multicols}
-\vspace{-1.5em}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Projects
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{multicols}{2}
-%\textsc{Projects}
-%\columnbreak
-%
-%\vspace{-1.75em}
-%\begin{itemize}[label=-]
-%    \setlength{\itemindent}{-1.50em}
-%    \setlength\itemsep{-0.25em}
-%    \item[]\hspace{-1.00em}\url{https://github.com/vpuri3}
-%    \item \href{https://github.com/vpuri3/diffMesh.jl}{\texttt{/diffMesh.jl}}: Automatic meshing/mesh optimization algorithms implemented in Julia
-%    \item \href{https://github.com/vpuri3/SEM.jl}{\texttt{/SEM.jl}}: Differentiable spectral element Navier-Stokes solver for machine learning research
-%%   \item \href{https://github.com/vpuri3/Spec}{\texttt{/Spec}}: MATLAB spectral element solver for the incompressible Navier--Stokes equations
-%%   \item \href{https://github.com/vpuri3/Notes}{\texttt{/Notes}}: \LaTeX{} notes on mechanics, real analysis, functional analysis
-%%   \item \href{https://github.com/vpuri3/NekTools}{\texttt{/NekTools}}: FORTRAN 77 toolbox for turbulence budgets computation in NEK5000
-%    \item \href{https://github.com/vpuri3/IlliniHyperloop}{\texttt{/IlliniHyperloop}}: (UIUC capstone project) Passive cooling solution to dissipate $\SI{300}{\kilo \joule}$ heat from propulsion system of Hyperloop pod; fabricated by sponsor, Novark Technologies, Inc.
-%%   \item \href{https://github.com/vpuri3/semUIUC}{\texttt{/semUIUC}}: Projects by UIUC Society for Engineering Mechanics - ackermann steering, chocolate printer, 2xx projects, s'mores machine
-%\end{itemize}
-%\vspace{-2.0em}
-%
-%\end{multicols}
-%\vspace{-1.5em}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% End
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vfill
 \end{document}
