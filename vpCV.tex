@@ -46,6 +46,8 @@ Developed FLARE, enabling million-token regimes on a single GPU.
 Implements new architectures in PyTorch and Triton.
 Background spans high-performance computing, numerical analysis, and computational fluid dynamics.
 
+\textbf{Research Interests:} Efficient attention, language modeling, scientific machine learning.
+
 \cvsection{Education}
 \textbf{Carnegie Mellon University (CMU)}\hfill Jan 2022--Present
 \begin{itemize}[label=]
@@ -65,10 +67,14 @@ Background spans high-performance computing, numerical analysis, and computation
   \item Derived a flexible low-rank reformulation of self-attention via latent routing
   \item Reduced quadratic complexity of self-attention to linear complexity while preserving global communication.
   \item Demonstrated scaling to 1M tokens on a single H100 GPU, attaining over $200\times$ speedup over vanilla self-attention.
-  % \item Implemented attention modules in PyTorch and Triton with reproducible scaling experiments.
-  % \item Evaluated across PDE surrogate modeling, NLP, and vision benchmarks.
-  \item \textbf{Ongoing}: extending FLARE to decoder-only language modeling;
-  adapting low-rank attention mechanisms for autoregressive training and memory-constrained inference paths using fused Triton kernels.
+  % \item \textbf{Ongoing}: extending FLARE to decoder-only language modeling; adapting low-rank attention mechanisms for autoregressive training and memory-constrained inference paths using fused Triton kernels.
+\end{itemize}
+
+\cvrole{FLARE for Language Modeling (Ongoing)}{Decoder-only architectures}{2025--Present}
+\begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
+  \item Extending FLARE to decoder-only next-token prediction with causal attention.
+  \item Enabling adaptive attention state size to control memory and compute during training and inference.
+  \item Implementing fused Triton kernels for causal training, prefill, and decode.
 \end{itemize}
 
 \cvrole{Equation-based PDE modeling with neural fields}{Hybrid data + physics methods}{2025}
@@ -129,12 +135,12 @@ Background spans high-performance computing, numerical analysis, and computation
 %  \item Created instructional demonstrations for engineering courses serving 2500 students annually.
 %\end{itemize}
 
-\cvsection{Teaching}
-\cvrole{Carnegie Mellon University}{Teaching Assistant, Numerical Analysis}{Spring 2025, Spring 2026}
+% \cvsection{Teaching}
+% \cvrole{Carnegie Mellon University}{Teaching Assistant, Numerical Analysis}{Spring 2025, Spring 2026}
 
-\cvrole{Carnegie Mellon University}{Teaching Assistant, Discrete Differential Geometry}{Spring 2023}
+% \cvrole{Carnegie Mellon University}{Teaching Assistant, Discrete Differential Geometry}{Spring 2023}
 
-% \cvrole{University of Illinois}{Course Assistant, Introductory Statics}{Spring 2016--Fall 2017}
+% % \cvrole{University of Illinois}{Course Assistant, Introductory Statics}{Spring 2016--Fall 2017}
 
 \cvsection{Publications}
 \textbf{Puri, V}. et al., \textit{FLARE: Fast Low-Rank Attention Routing Engine}. arXiv 2025. (Under review)
