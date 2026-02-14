@@ -1,0 +1,23 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Research Statement — Vedant Puri}}
+\end{center}
+
+My research focuses on designing scalable transformer architectures grounded in principles from numerical analysis and scientific computing. I am particularly interested in understanding how structured low-rank approximations, operator factorizations, and communication constraints can be leveraged to improve the efficiency and stability of large-scale sequence models.
+
+My recent work introduces FLARE (Fast Low-Rank Attention Routing Engine), a unified reformulation of transformer self-attention that replaces quadratic attention matrices with an implicit low-rank factorization through a learned routing space. Rather than modifying attention heuristically, FLARE derives a structured decomposition of global token interactions, reducing memory complexity from $\mathcal{O}(N^2)$ to $\mathcal{O}(NM)$. The architecture maps cleanly to modern deep learning frameworks and has been implemented using Triton-based attention modules in PyTorch. FLARE scales to million-token inputs on a single GPU and has been evaluated across scientific surrogate modeling tasks and general transformer benchmarks.
+
+Prior to focusing on transformer architectures, my research centered on reduced-order modeling and neural fields for partial differential equations. In SNF-ROM, I introduced coordinate-based neural fields as nonlinear spatial ansatz functions for projection-based model reduction. This work combined physics-based time evolution with differentiable neural representations, enabling expressive yet structured approximations of complex dynamical systems. My background in finite element methods, spectral element methods, and numerical analysis informs my architectural work today, particularly in reasoning about stability, conditioning, and approximation error.
+
+Moving forward, I am interested in extending low-rank and structured attention mechanisms to long-context language modeling and decoder-only architectures, with particular attention to memory scaling and communication structure. I am motivated by the broader question: how can ideas from numerical linear algebra and operator theory guide the next generation of scalable deep learning architectures?
+
+My long-term goal is to contribute to the development of principled, efficient model architectures that balance expressive power with computational tractability, bridging scientific computing and large-scale machine learning.
+
+\end{document}
