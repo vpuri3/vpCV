@@ -24,11 +24,18 @@
 \pagenumbering{gobble}
 \setlist[itemize]{leftmargin=1.45em,labelsep=0.5em,itemsep=0.05em,topsep=0.05em,parsep=0em,partopsep=0em}
 
+% \newcommand{\cvsection}[1]{%
+%   \vspace{0.2em}%
+%   {\normalsize\textsc{#1}}\\[-0.50em]
+%   \rule{\linewidth}{0.4pt}
+%   \vspace{-0.25em}
+% }
+
 \newcommand{\cvsection}[1]{%
-  \vspace{0.2em}%
-  {\normalsize\textsc{#1}}\\[-0.50em]
+  \vspace{0.30em}%
+  {\large\textsc{#1}}\\[-0.90em]
   \rule{\linewidth}{0.4pt}
-  \vspace{-0.25em}
+  \vspace{-0.15em}
 }
 
 \newcommand{\cvrole}[3]{\textbf{#1} $|$ \textit{#2}\hfill #3}
@@ -40,22 +47,17 @@
 \href{mailto:vedantpuri@cmu.edu}{\texttt{vedantpuri@cmu.edu}} $|$
 \href{https://vpuri3.github.io/}{\texttt{https://vpuri3.github.io/}}
 
-\cvsection{Summary}
-Designs transformer architectures with explicit attention to scaling, memory, and communication structure.
-Developed FLARE, enabling million-token regimes on a single GPU.
-Implements new architectures in PyTorch and Triton.
-Background spans high-performance computing, numerical analysis, and computational fluid dynamics.
-
-% Trained in mathematics and applied mechanics with experience in high performance computing, numerical algorithms, and computational fluid dynamics. Equally comfortable writing code or manipulating differential equations.
-% Finished undergraduate studies at University of Illinois in Dec '19. My thesis was on wall-bounded turbulence with collaborators from Argonne National Lab. Currently working on scientific machine learning and numerical PDEs at Julia Computing.
-
-\textbf{Research Interests:} Efficient attention, language modeling, scientific machine learning.
+\cvsection{Objective}
+PhD candidate graduating August 2026 seeking a technical role in machine learning architecture research.
+Experience designing scalable transformer architectures in PyTorch and implementing them in Triton.
+Background in high-performance computing, numerical analysis, and computational fluid dynamics.
 
 \cvsection{Education}
 \textbf{Carnegie Mellon University}\hfill Jan 2022--Present
 \begin{itemize}[label=]
   \item \textit{Ph.D Mechanical Engineering}.
   Advisors: Levent Burak Kara, Yongjie Jessica Zhang
+  \item Proposed thesis: \textit{Neural representations for computational physics: from reduced order modeling to transformers}
 \end{itemize}
 
 \textbf{University of Illinois Urbana-Champaign}\hfill 2015--2019
@@ -84,7 +86,7 @@ Background spans high-performance computing, numerical analysis, and computation
 \begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
   \item Introduced smooth neural fields as nonlinear spatial ansatz functions in equation-based reduced-order modeling.
   \item Retained physics-based Galerkin time evolution while learning expressive low-dimensional representations.
-  \item Attained $200\times$ speedup over full-order simulations in transport-dominated regimes.
+  \item Attained $199\times$ speedup over full-order simulations in transport-dominated regimes.
 \end{itemize}
 
 \cvsection{Experience}
@@ -146,11 +148,13 @@ Background spans high-performance computing, numerical analysis, and computation
 % % \cvrole{University of Illinois}{Course Assistant, Introductory Statics}{Spring 2016--Fall 2017}
 
 \cvsection{Publications}
-\textbf{Puri, V}. et al., \textit{FLARE: Fast Low-Rank Attention Routing Engine}. arXiv 2025. (Under review)
+\textbf{Puri, V}. et al., \textit{Low-rank attention routing for causal language modeling} (In preparation).
 
-\textbf{Puri, V}. et al., \textit{SNF-ROM: Projection-based nonlinear reduced order modeling with smooth neural fields}. JCP 2025.
+\textbf{Puri, V}. et al., \textit{FLARE: Fast Low-Rank Attention Routing Engine}. \href{https://arxiv.org/abs/2508.12594}{arXiv:2508.12594} (2025) (Under review).
 
-Shankar, V., \textbf{Puri, V.}, et al., \textit{Differentiable physics closure modeling for Burgers' turbulence}. MLST 2023.
+\textbf{Puri, V}. et al., \textit{SNF-ROM: Reduced order modeling with smooth neural fields}. JCP 2025, \href{https://doi.org/10.1016/j.jcp.2025.113957}{doi:10.1016/j.jcp.2025.113957}.
+
+S, V., \textbf{Puri, V.}, et al., \textit{Closure modeling for Burgers' turbulence}. MLST 2023, \href{https://doi.org/10.1088/2632-2153/acb19c}{doi:10.1088/2632-2153/acb19c}.
 
 \cvsection{Awards}
 \cvrole{World Conference on Computational Mechanics}{Best poster in fluid dynamics}{2024}
@@ -170,5 +174,7 @@ Shankar, V., \textbf{Puri, V.}, et al., \textit{Differentiable physics closure m
 \cvskill{Programming Languages}{Python, Julia, C, Fortran 77, MATLAB, UNIX, \LaTeX}
 
 \cvskill{Modeling Domains}{Transformer architectures, neural operators, reduced-order modeling}
+
+%\cvskill{Languages}{English (fluent), Hindi (native)}
 
 \end{document}
