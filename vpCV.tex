@@ -32,10 +32,10 @@
 % }
 
 \newcommand{\cvsection}[1]{%
-  \vspace{0.30em}%
-  {\large\textsc{#1}}\\[-0.90em]
+  \vspace{0.25em}%
+  {\Large\textsc{#1}}\\[-0.90em]
   \rule{\linewidth}{0.4pt}
-  \vspace{-0.15em}
+  \vspace{-0.10em}
 }
 
 \newcommand{\cvrole}[3]{\textbf{#1} $|$ \textit{#2}\hfill #3}
@@ -49,8 +49,8 @@
 
 \cvsection{Objective}
 PhD candidate graduating August 2026 seeking a technical role in machine learning research.
-Experience designing scalable transformer architectures in PyTorch and implementing them in Triton.
-Background in high-performance computing, numerical analysis, and computational fluid dynamics.
+Experience developing scalable-transformers and custom GPU kernels for large-scale training.
+Background in computational fluid dynamics.
 
 \cvsection{Education}
 \textbf{Carnegie Mellon University}\hfill Jan 2022--Present
@@ -82,7 +82,7 @@ Background in high-performance computing, numerical analysis, and computational 
   \item Implementing fused Triton kernels for causal training, prefill, and decode.
 \end{itemize}
 
-\cvrole{Equation-based PDE modeling with neural fields}{Hybrid data + physics methods}{2025}
+\cvrole{Equation-based PDE modeling with neural manifolds}{Hybrid data + physics methods}{2024}
 \begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
   \item Introduced smooth neural fields as nonlinear spatial ansatz functions in equation-based reduced-order modeling.
   \item Retained physics-based Galerkin time evolution while learning expressive low-dimensional representations.
@@ -95,8 +95,8 @@ Background in high-performance computing, numerical analysis, and computational 
 \begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
   % \item Efficient attention architectures for scientific computing.
   % \item Equation-based reduced order modeling for computational fluid dynamics.
-  \item Phase field simulations of lithium dendritic growth in solid-state batteries.
-  \item Turbulence closure modeling with differentiable physics.
+  \item Wrote solvers for phase field simulations of lithium dendritic growth in solid-state batteries.
+  \item Wrote fluids dynamics solvers for turbulence closure modeling with differentiable physics.
 \end{itemize}
 %
 \cvrole{Julia Computing}{Intern Engineer}{Apr 2021--Nov 2021}
@@ -148,11 +148,11 @@ Background in high-performance computing, numerical analysis, and computational 
 % % \cvrole{University of Illinois}{Course Assistant, Introductory Statics}{Spring 2016--Fall 2017}
 
 \cvsection{Publications}
-\textbf{Puri, V}. et al., \textit{Low-rank attention routing for causal language modeling} (In preparation).
+\textbf{Puri, V}. et al., \textit{FLARE Decoder: Low-rank attention routing for causal language modeling} (In preparation).
 
 \textbf{Puri, V}. et al., \textit{FLARE: Fast Low-Rank Attention Routing Engine}. \href{https://arxiv.org/abs/2508.12594}{arXiv:2508.12594} (2025) (Under review).
 
-\textbf{Puri, V}. et al., \textit{SNF-ROM: Reduced order modeling with smooth neural fields}. JCP 2025, \href{https://doi.org/10.1016/j.jcp.2025.113957}{doi:10.1016/j.jcp.2025.113957}.
+\textbf{Puri, V}. et al., \textit{Reduced order modeling with smooth neural fields}. JCP 2025, \href{https://doi.org/10.1016/j.jcp.2025.113957}{doi:10.1016/j.jcp.2025.113957}.
 
 S, V., \textbf{Puri, V.}, et al., \textit{Closure modeling for Burgers' turbulence}. MLST 2023, \href{https://doi.org/10.1088/2632-2153/acb19c}{doi:10.1088/2632-2153/acb19c}.
 
@@ -166,14 +166,15 @@ S, V., \textbf{Puri, V.}, et al., \textit{Closure modeling for Burgers' turbulen
 %\cvrole{Society for Engineering Mechanics, UIUC}{Curriculum Development}{2017--2018}
 
 \cvsection{Technical Skills}
-% \cvskill{GPU Programming}{Triton}
-\cvskill{Machine Learning Systems}{PyTorch, Triton, mixed-precision/distributed training, causal language modeling}
+\cvskill{ML Architectures}{Efficient attention, causal transformers, memory-efficient prefill/decode, neural operators.}
 
-\cvskill{Numerical Computing}{Numerical analysis, scientific computing, linear algebra, finite elements, spectral methods}
+\cvskill{ML Systems}{PyTorch, distributed/mixed-precision training, distributed training, causal language modeling.}
 
-\cvskill{Programming Languages}{Python, Julia, C, Fortran 77, MATLAB, UNIX, \LaTeX}
+\cvskill{GPU \& Systems}{Triton kernel development, FlashAttention-style block algorithms, online softmax, Nsight profiling.}
 
-\cvskill{Modeling Domains}{Transformer architectures, neural operators, reduced-order modeling}
+\cvskill{Scientific Foundations}{Numerical linear algebra, PDE-constrained modeling, finite elements, spectral methods.}
+
+\cvskill{Programming Languages}{Python, Julia, C, Fortran 77, MATLAB, UNIX, \LaTeX.}
 
 %\cvskill{Languages}{English (fluent), Hindi (native)}
 
