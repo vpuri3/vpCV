@@ -70,9 +70,9 @@ Background in computational fluid dynamics.
 \cvrole{FLARE: Fast Low-Rank Attention Routing Engine}{Efficient attention architectures}{2025}
 \begin{itemize}[leftmargin=1.45em,labelindent=0.45em]
   \item Derived a flexible low-rank reformulation of self-attention via latent routing.
-  \item Reduced quadratic complexity of global communication in self-attention to linear complexity.
+  % \item Reduced quadratic complexity of global communication in self-attention to linear complexity.
   \item Demonstrated scaling to 1M tokens on a single H100 GPU, attaining over $200\times$ speedup over vanilla self-attention.
-  % \item \textbf{Ongoing}: extending FLARE to decoder-only language modeling; adapting low-rank attention mechanisms for autoregressive training and memory-constrained inference paths using fused Triton kernels.
+  \item Integrated into NVIDIA PhysicsNeMo as an experimental model for scientific machine learning workloads.
 \end{itemize}
 
 \cvrole{FLARE for Language Modeling (Ongoing dissertation work)}{Decoder-only architectures}{2025--Present}
